@@ -5,7 +5,7 @@
   <img src="https://komarev.com/ghpvc/?username=soumyadeephalder&color=blueviolet&style=flat">
 </p> -->
 
-- 🌱 I’m currently learning **Redux, Express, Node.js, python Typescript, etc.**
+- 🌱 I’m currently work **Redux, Express, Node.js, python, Typescript, etc.**
 
 - 👨‍💻 All of my projects are available at [github](https://github.com/soumyadeephalder?tab=repositories)
 
