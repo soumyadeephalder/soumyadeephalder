@@ -4,7 +4,9 @@
 
 ### open sites-available default via nano editor 
 
-`$ sudo nano /etc/nginx/sites-available/default`
+```javascript
+sudo nano /etc/nginx/sites-available/default
+```
 
 ### Add new line 
 ```javascript
@@ -27,3 +29,17 @@
     }
 
 ```
+#### Next, test to make sure that there are no syntax errors in any of your Nginx files:
+
+```javascript 
+sudo nginx -t
+```
+ 
+#### If no problems were found, restart Nginx to enable your changes:
+
+
+```javascript
+sudo systemctl restart nginx
+```
+ 
+#### Nginx should now be serving both of your domain names.
