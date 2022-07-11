@@ -2,10 +2,10 @@
 
 ## 2nd step 
 
-### open sites-available default via nano editor 
+### create or add new file in sites-available  via nano editor 
 
 ```javascript
-sudo nano /etc/nginx/sites-available/default
+sudo nano /etc/nginx/sites-available/example.com
 ```
 
 ### Add new line 
@@ -27,6 +27,10 @@ sudo nano /etc/nginx/sites-available/default
             }
     }
 
+```
+#### link file 
+```javascript 
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
 ```
 #### Next, test to make sure that there are no syntax errors in any of your Nginx files:
 
