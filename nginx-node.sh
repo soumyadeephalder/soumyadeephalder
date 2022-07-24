@@ -2,7 +2,7 @@
 
 echo "Start Your Install ....."
 
-if [ "$EUID" -ne 0 ]
+if [ "$EUID" == 0 ]
 then
     sudo apt install nginx -y
 
