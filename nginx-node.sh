@@ -10,7 +10,7 @@ then
     sleep 1
     # node js install version
     cd ~
-    curl -sL https://deb.nodesource.com/setup_16.x -o /tmp/nodesource_setup.sh
+    curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
 
     sudo bash /tmp/nodesource_setup.sh
 
