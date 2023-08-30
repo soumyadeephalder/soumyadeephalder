@@ -4,6 +4,7 @@ echo "Start Your Install ....."
 
 if [ "$EUID" == 0 ]
 then
+    sudo apt update
     sudo apt install nginx -y
 
 #     echo -ne '#####                     (33%)\r'
@@ -11,9 +12,9 @@ then
     # node js install version
     cd ~
     curl -sL https://deb.nodesource.com/setup_18.x -o /tmp/nodesource_setup.sh
-
+    sudo apt update
     sudo bash /tmp/nodesource_setup.sh
-
+    sudo apt update
     sudo apt-get install -y nodejs
     
 #     echo -ne '#############             (66%)\r'
