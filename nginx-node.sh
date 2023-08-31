@@ -33,6 +33,7 @@ then
     echo -ne '\n'
     echo -ne 'Done all install'
 
+    sudo chown -R $USER:$USER /var/www/html
     
 else
     echo "pls use Sudo OR roon user"
