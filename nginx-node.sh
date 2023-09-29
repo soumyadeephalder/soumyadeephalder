@@ -24,6 +24,7 @@ then
     echo -ne '\n'
     node -v 
     echo -ne '\n'
+    sudo apt install npm -y
     npm -v
 
     echo "Node Js install done !"
