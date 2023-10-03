@@ -59,4 +59,6 @@
 <a href="mailto:soumyadeephalder1@gmail.com"><img src="https://img.shields.io/badge/-soumyadeephalder1@gmail.com-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
 <!-- <a href="https://twitter.com/soumyadeep"><img src="https://img.shields.io/badge/-@soumyadeep-1877F2?style=flat&logo=Twitter&logoColor=white"/></a>
 </p> -->
-<!-- <p align="center"><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=soumyadeep&" alt="soumyadeep" /></p> -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+<h2 align="left">🏆 Github trophies:</h2>
+<p align="left"><img src="https://github-profile-trophy.vercel.app/?username=soumyadeephalder&theme=onedark" alt="biprajitpaul5555" /> </p>
