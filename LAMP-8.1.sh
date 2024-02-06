@@ -19,8 +19,8 @@ then
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt update
 
-    sudo apt install -y php8.0 libapache2-mod-php
-    sudo apt-get install -y php8.0-cli php8.0-common php8.0-mysql php8.0-zip php8.0-gd php8.0-mbstring php8.0-curl php8.0-xml php8.0-bcmath
+    sudo apt install -y php8.1 libapache2-mod-php
+    sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
 
     sleep 2
 
@@ -45,7 +45,8 @@ then
     sudo chown -R $USER:$USER /var/www/html
     sudo phpenmod mbstring
     sudo systemctl restart apache2
-    
+
+    apt install composer -y
 
     sudo nano /etc/apache2/mods-enabled/dir.conf
 
