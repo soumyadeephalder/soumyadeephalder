@@ -19,8 +19,8 @@ then
     sudo add-apt-repository ppa:ondrej/php 
     sudo apt update
 
-    sudo apt install -y php8.1 libapache2-mod-php
-    sudo apt-get install -y php8.1-cli php8.1-common php8.1-mysql php8.1-zip php8.1-gd php8.1-mbstring php8.1-curl php8.1-xml php8.1-bcmath
+    sudo apt install -y php8.2 libapache2-mod-php
+    sudo apt-get install -y php8.2-cli php8.2-common php8.2-mysql php8.2-zip php8.2-gd php8.2-mbstring php8.2-curl php8.2-xml php8.2-bcmath
 
     sleep 2
 
