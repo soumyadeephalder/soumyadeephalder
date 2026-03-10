@@ -3,52 +3,80 @@
 NODE_VERSION=$1
 
 if [ -z "$NODE_VERSION" ]; then
-echo "Usage: bash install.sh <node_version>"
-echo "Example: bash install.sh 24"
+echo "Usage: sudo bash install.sh <node_version>"
+echo "Example: sudo bash install.sh 24"
 exit 1
 fi
 
-echo "Start Your Install ....."
+echo "================================="
+echo "Starting Server Setup"
 echo "Node Version: $NODE_VERSION"
+echo "================================="
 
-if [ "$EUID" == 0 ]
-then
-apt update
-apt install nginx -y
-apt install curl build-essential -y
+# install base packages
 
-```
-sleep 1
+echo "Updating system..."
+apt update -y
 
-echo "Installing NVM..."
+echo "Installing Nginx, curl, build tools..."
+apt install nginx curl build-essential -y
+
+echo "---------------------------------"
+echo "Installing NVM"
+echo "---------------------------------"
+
+# install nvm
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# load nvm
 
-sleep 1
+export NVM_DIR="/root/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-echo "Installing Node.js v$NODE_VERSION..."
+echo "---------------------------------"
+echo "Installing Node.js v$NODE_VERSION"
+echo "---------------------------------"
 
 nvm install $NODE_VERSION
 nvm use $NODE_VERSION
 nvm alias default $NODE_VERSION
 
 echo ""
+echo "Node Version:"
 node -v
+
+echo ""
+echo "NPM Version:"
 npm -v
 
-echo "Node Js install done !"
+echo "---------------------------------"
+echo "Installing PM2"
+echo "---------------------------------"
 
 npm install -g pm2
 
-echo ""
-echo "Done all install"
+echo "---------------------------------"
+echo "Setting PM2 startup"
+echo "---------------------------------"
 
-chown -R $SUDO_USER:$SUDO_USER /var/www/html
-```
+pm2 startup systemd -u root --hp /root
 
-else
-echo "pls use sudo OR root user"
-fi
+echo "---------------------------------"
+echo "Fixing web directory permission"
+echo "---------------------------------"
+
+chown -R $SUDO_USER:$SUDO_USER /var/www/html 2>/dev/null
+
+echo "---------------------------------"
+echo "INSTALLATION COMPLETE"
+echo "---------------------------------"
+
+echo "Nginx Version:"
+nginx -v
+
+echo "Node Version:"
+node -v
+
+echo "PM2 Version:"
+pm2 -v
