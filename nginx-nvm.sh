@@ -80,3 +80,5 @@ node -v
 
 echo "PM2 Version:"
 pm2 -v
+
+source ~/.bashrc
